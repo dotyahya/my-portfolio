@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="p-3 fixed-top">
       <div className="container d-flex justify-content-between align-items-center">
-        <RouterLink to="/" className="logo">Muhammad Yahya.</RouterLink>
+        <RouterLink to="/" className="logo">cat portfolio.md</RouterLink>
         <nav className="navbar">
           <ScrollLink to="home" smooth={true} duration={500} className="nav-link mx-2">Home</ScrollLink>
           <ScrollLink to="about" smooth={true} duration={500} className="nav-link mx-2">About</ScrollLink>
