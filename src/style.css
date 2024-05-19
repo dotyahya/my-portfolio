@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+/* Universal selector; applies the styling to all elements on the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+    color: #00FF00; /* Neon green color */
+}
+
+body {
+    background: #000000; /* Dark background */
+    color: #00FF00; /* Neon green color */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Styles */
+header {
+    background: #000000; /* Dark background */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+    box-shadow: 0 3px 25px rgba(0, 255, 0, 0.2);
+    animation: slideDown 0.8s ease-in-out;
+}
+
+.logo {
+    font-size: 24px; /* Increased font size for better visibility */
+    font-weight: 500;
+    text-decoration: none;
+    color: #00FF00; /* Neon green color */
+    margin-right: 20px; /* Space between logo and nav links */
+}
+
+.navbar {   
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 18px; /* Increased font size for better visibility */
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .3s;
+    color: #00FF00; /* Neon green color */
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #00FF00;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* Home Section */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: left; /* Align text to the left */
+    padding: 0 10%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.home-content {
+    max-width: 1000px;
+}
+
+.home-content h1 {
+    font-size: 48px; /* Increased font size for better visibility */
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: typing 2s steps(20) 1s 1 normal both, blink 1s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #00FF00;
+    width: 16.5ch; /* adjusted width to stop after the emoji */
+    /* position: relative; */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 16.5ch; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #00FF00; }
+}
+
+.home-content h3 {
+    font-size: 24px; /* Increased font size for better visibility */
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.home-content p {
+    font-size: 18px; /* Increased font size for better visibility */
+    margin: 20px 0 40px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #FF00FF; /* Neon pink border for avatar */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: flex-end; /* Align to the left */
+    gap: 20px;
+}
+
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #00FF00; /* Neon green border */
+    border-radius: 8px;
+    font-size: 18px; /* Increased font size for better visibility */
+    text-decoration: none;
+    color: #00FF00; /* Neon green color */
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    background: #00FF00; /* Neon green background */
+    color: #000000; /* Dark text color */
+    animation: pulse 1s infinite;
+}
+
+
+/* About, Services, Portfolio, and Contact Sections */
+.section-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #000000; /* Dark background */
+    border: 1px solid #00FF00; /* Neon green border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    color: #00FF00; /* Neon green color */
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.card h3 {
+    font-size: 24px; /* Increased font size for better visibility */
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 18px; /* Increased font size for better visibility */
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+form label {
+    width: 100%;
+    color: #00FF00; /* Neon green color */
+}
+
+form .custom-input {
+    width: 100%;
+    padding: 10px;
+    background: #000000; /* Dark background */
+    border: 1px solid #00FF00; /* Neon green border */
+    border-radius: 5px;
+    color: #00FF00; /* Neon green color */
+    transition: background 0.3s;
+}
+
+form .custom-input:focus {
+    background: #000000;
+    color: #FFFFFF; /* White text color */
+    outline: none;
+    border-color: #00FF00; /* Neon green border color */
+}
+
+form .custom-button {
+    display: inline-flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #00FF00; /* Neon green border */
+    border-radius: 8px;
+    font-size: 18px; /* Increased font size for better visibility */
+    text-decoration: none;
+    color: #00FF00; /* Neon green color */
+    transition: .5s;
+}
+
+form .custom-button:hover {
+    background: #00FF00; /* Neon green background */
+    color: #000000; /* Dark text color */
+    animation: pulse 1s infinite;
+}
+
+/* Contact Icons */
+.contact-icon {
+    font-size: 48px;
+    color: #00FF00;
+    margin-bottom: 15px;
+}
+
+.contact-link {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 36px;
+    text-align: left;
+    margin-top: 50px; /* Space to prevent overlap with fixed header */
+    margin-bottom: 40px;
+    width: 100%; /* Ensure the heading takes the full width */
+}
+
+/* Footer Styles */
+.footer {
+    background: #000000; /* Dark background */
+    padding: 20px 0;
+    color: #00FF00; /* Neon green color */
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 -3px 25px rgba(0, 255, 0, 0.2);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.footer-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.footer-link {
+    color: #00FF00; /* Neon green color */
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.back-to-top {
+    font-size: 16px;
+}
+
+.back-to-top a {
+    color: #00FF00; /* Neon green color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-to-top a:hover {
+    color: #FF00FF; /* Neon pink color */
+}
+
+/* Keyframes Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
