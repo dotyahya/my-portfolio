@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap CSS
-import './style.css'; // custom CSS to override bootstrap
+import '../public/style.css'; // custom CSS to override bootstrap
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
