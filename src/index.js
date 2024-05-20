@@ -1,3 +1,4 @@
+import '@fortawesome/fontawesome-free/css/all.min.css'; // FontAwesome for hamburger menu (mobile navbar menu)
 import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap CSS
 import './style.css'; // custom CSS to override bootstrap
 import React from 'react';

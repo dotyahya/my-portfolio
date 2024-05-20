@@ -24,7 +24,7 @@ header {
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: flex-start; /* Align to the left */
+    justify-content: space-between; /* Space between logo and hamburger/menu */
     align-items: center;
     box-shadow: 0 3px 25px rgba(0, 255, 0, 0.2);
     animation: slideDown 0.8s ease-in-out;
@@ -36,10 +36,9 @@ header {
     text-decoration: none;
     color: #00FF00; /* Neon green color */
     margin-right: 20px; /* Space between logo and nav links */
-    /* margin-left: 8px; */
 }
 
-.navbar {   
+.navbar {
     display: flex;
     justify-content: flex-start; /* Align to the left */
     align-items: center;
@@ -72,10 +71,38 @@ header {
     width: 100%;
 }
 
+/* Mobile menu styles */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #00FF00; /* Neon green color */
+}
+
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px; /* Align with the hamburger menu */
+    background: #000000; /* Dark background */
+    border: 1px solid #00FF00; /* Neon green border */
+    box-shadow: 0 3px 25px rgba(0, 255, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-menu .nav-link {
+    margin: 10px 0;
+    text-align: center;
+}
 
 /* Home Section */
 .home {
-    height: 105vh;
+    height: calc(100vh - 60px); /* Adjust this value based on the header height */
     display: flex;
     align-items: center;
     text-align: left; /* Align text to the left */
@@ -97,7 +124,6 @@ header {
     overflow: hidden;
     border-right: 4px solid #00FF00;
     width: 16.5ch; /* adjusted width to stop after the emoji */
-    /* position: relative; */
 }
 
 @keyframes typing {
@@ -156,7 +182,6 @@ header {
     color: #000000; /* Dark text color */
     animation: pulse 1s infinite;
 }
-
 
 /* About, Services, Portfolio, and Contact Sections */
 .section-content {
@@ -361,5 +386,50 @@ form .custom-button:hover {
     }
     50% {
         transform: scale(1.05);
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .dropdown-menu.show {
+        display: flex;
+    }
+    .home-content h1 {
+        font-size: 32px; /* Smaller font size for smaller screens */
+    }
+    .home-content h3 {
+        font-size: 20px;
+    }
+    .home-content p {
+        font-size: 16px;
+    }
+    .btn-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-box a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .section-heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-content h1 {
+        font-size: 24px; /* Smaller font size for phones */
+    }
+    .home-content h3 {
+        font-size: 18px;
+    }
+    .home-content p {
+        font-size: 14px;
     }
 }
