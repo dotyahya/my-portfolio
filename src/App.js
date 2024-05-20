@@ -14,7 +14,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={
+        <Route path="/my-portfolio" element={
           <div>
             <Element name="home">
               <Home />
